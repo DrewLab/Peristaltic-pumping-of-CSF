@@ -1,0 +1,10 @@
+vwall (uo*teq/tau/vo)*d(uwall,t)
+umx 0
+umxt d(umx,t)
+umxx d(umx,x)
+umxy d(umx,y)
+umyt d(umy,t)
+umyx d(umy,x)
+umyy d(umy,y)
+uwall phi*(step2(x/Leq)-step2((x-1)/Leq-step1(t/teq)*c*t*tau/teq/Lo))
+umy 2*uwall*(0.5-y/Leq)
