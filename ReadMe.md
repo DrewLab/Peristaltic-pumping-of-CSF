@@ -33,24 +33,40 @@ comsol -nn <number_of_nodes> batch -inputfile <inputfile>.class -otputfile <outp
 **************** Generate result figures
 ****************
 **********************************************************************************************
-To create the 2d demo of fluid motion under wall movement:
+To create Fig 1 - 2d demo of fluid motion under wall movement:
 1. Run "Peristalsis_demo_2d.class" with COMSOL
-this will generate the results file demo2dResults.txt
+this generates the results file demo2dResults.txt
 the output .mph file will contain the pressure surface plot in Fig 1b
 2. Run "peristalsis_mechanism_demo.m" with Matlab
 this generates the particle tracking plots in Fig 1a and the video SV1
 **********************************************************************************************
-To create the 2d demo of fluid motion under periodic wall movement:
+To create Fig S1 - the 2d demo of fluid motion under periodic wall movement:
 1. Run "Peristalsis_wave_2d.class" with COMSOL
-this will generate the results file wave2dResults.txt
+this generates the results file wave2dResults.txt
 the output .mph file will contain the pressure surface plot in Fig S1b
 2. Run "peristalsis_wave_demo.m" with Matlab
 this generates the particle tracking plots in Fig S1a and the video SV2
 *********************************************************************************************
+To create Fig 2 - Fluid motion under axisymmetric model of PVS:
+1. Run "peristalsis_as_amp_sweep.class" with COMSOL
+this generates the results in figures 2a, 2c and 2d in COMSOL and "axisymmetricResults.txt"
+2. Run "Parttrak_Sine_AS.m" 
+this generates figures 2e-2g
+**********************************************************************************************
+To create Fig 3 - Fluid motion under a 3D geometry of PVS:
+1. Run "PVS_3D_full_length.class" with COMSOL
+this generates figures 3d, 3e and "pvsFullLengthResults.txt"
+of memory per node.
+2. Run "PVS_full_length.m" to generate Fig 3c
+**********************************************************************************************
+To create Fig S2 - 3D PVS model with corrected length of PVS:
+1. Run "PVS_3D_5mm.class" with COMSOL
+this generates figure S2b and "pvs5mmResults.txt"
+2. Run "PVS_5mm_length.m" to generate Fig S2c
+**********************************************************************************************
 
 
-
-
+Note: The 3d models has 520,000 degrees of freedom. It is recommended to run this on a cluster with atleast 16gb
 
 All Wolfram Mathematica files
 Copyright (c) 2020 Francesco Costanzo
