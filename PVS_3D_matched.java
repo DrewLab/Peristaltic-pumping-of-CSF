@@ -396,6 +396,7 @@ public class PVS_3D_matched {
     model.result("pg2").create("slc1", "Slice");
     model.result("pg2").create("arwv1", "ArrowVolume");
     model.result("pg2").feature("slc1").create("def1", "Deform");
+    model.result("pg2").feature("arwv1").create("def1", "Deform");
     model.result("pg3").create("slc1", "Slice");
     model.result("pg3").feature("slc1").create("def1", "Deform");
     model.result("pg8").create("ptgr1", "PointGraph");
@@ -445,8 +446,8 @@ public class PVS_3D_matched {
     model.result("pg2").feature("slc1").set("quickplane", "zx");
     model.result("pg2").feature("slc1").set("quickynumber", 1);
     model.result("pg2").feature("slc1").set("rangecoloractive", true);
-    model.result("pg2").feature("slc1").set("rangecolormin", -15000);
-    model.result("pg2").feature("slc1").set("rangecolormax", 15000);
+    model.result("pg2").feature("slc1").set("rangecolormin", -15);
+    model.result("pg2").feature("slc1").set("rangecolormax", 15);
     model.result("pg2").feature("slc1").set("colortable", "Twilight");
     model.result("pg2").feature("slc1").set("colortablerev", true);
     model.result("pg2").feature("slc1").set("resolution", "norefine");
@@ -460,7 +461,11 @@ public class PVS_3D_matched {
     model.result("pg2").feature("arwv1").set("descr", "");
     model.result("pg2").feature("arwv1").set("ynumber", 1);
     model.result("pg2").feature("arwv1").set("znumber", 20);
-    model.result("pg2").feature("arwv1").set("scale", 0.03);
+    model.result("pg2").feature("arwv1").set("scale", 20);
+    model.result("pg2").feature("arwv1").feature("def1")
+         .set("expr", new String[]{"umx*uo*Leq/Lo/g1", "umy*uo*Leq/Lo/g2", "umz*uo*Leq/Lo/g3"});
+    model.result("pg2").feature("arwv1").feature("def1").set("scale", 50);
+    model.result("pg2").feature("arwv1").feature("def1").set("scaleactive", true);
     model.result("pg2").feature("arwv1").set("scaleactive", true);
     model.result("pg2").feature("arwv1").set("color", "black");
     model.result("pg3").label("Pressure");
