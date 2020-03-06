@@ -5,6 +5,7 @@ import java.util.Scanner;
 import java.nio.file.Paths;
 
 /** Model exported on Feb 28 2020, 18:53 by COMSOL 5.4.0.388. */
+// Modified by Ravi Kedarasetti for readability and modularity
 public class Peristalsis_as_gradients {
 
 	public static Model setparams(Model model, String fileName) {

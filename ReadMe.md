@@ -64,9 +64,20 @@ To create Fig S2 - 3D PVS model with corrected length of PVS:
 this generates figure S2b and "pvs5mmResults.txt"
 2. Run "PVS_5mm_length.m" to generate Fig S2c
 **********************************************************************************************
+To create Fig 4 - 3D PVS model with results matching experimental findings:
+1. Run "PVS_3D_matched_p.class" with COMSOL
+The pressure difference at the ends of the PVS is passed as an argument to comsol
+The pressure value given as an argument is in 1/100th of mmHg
+For example: 
+"comsol -nn 8 batch -inputfile PVS_3D_matched_p.class 2 -outputfile PVS_3D_matched_P2.mph -batchlog p2.log"
+runs the simulation with a pressure difference of 0.02mmHg across the length of the PVS
+2. Run "PVS_matched.m" to generate Fig 4e,4f,4g
+**********************************************************************************************
+To create Fig S3 - Velocity gradients in computational domain
+1. Run "Peristalsis_as_gradients.class"
+**********************************************************************************************
 
-
-Note: The 3d models has 520,000 degrees of freedom. It is recommended to run this on a cluster with atleast 16gb
+Note: The 3d models have over 520,000 degrees of freedom. It is recommended to run this on a cluster with atleast 16gb per node
 
 All Wolfram Mathematica files
 Copyright (c) 2020 Francesco Costanzo
