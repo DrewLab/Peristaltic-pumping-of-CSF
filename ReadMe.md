@@ -1,4 +1,4 @@
-Written by Ravi Kedarasetti(2020), Department of Engineering science and mechancs, Pennsylvania State University , PA, USA
+﻿Written by Ravi Kedarasetti(2020), Department of Engineering science and mechancs, Pennsylvania State University , PA, USA
 rpk5196_at_psu_dot_edu
 
 All the .m  files in this repository work with Matlab® 2019 (Mathworks Inc.)
@@ -76,8 +76,11 @@ runs the simulation with a pressure difference of 0.02mmHg across the length of 
 To create Fig S3 - Velocity gradients in computational domain
 1. Run "Peristalsis_as_gradients.class"
 **********************************************************************************************
+To create Fig S4b - Mesh convergence
+1. Run "Mesh_convergence_AS.class"
+**********************************************************************************************
 
-Note: The 3d models have over 520,000 degrees of freedom. It is recommended to run this on a cluster with atleast 16gb per node
+Note: The 3d models have over 1,200,000 degrees of freedom. It is recommended to run this on a cluster with atleast 16gb per node
 
 All Wolfram Mathematica files
 Copyright (c) 2020 Francesco Costanzo

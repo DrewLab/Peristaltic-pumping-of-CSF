@@ -150,10 +150,10 @@ public class Peristalsis_as_amp_sweep {
     model.component("comp1").mesh("mesh1").feature("map1").feature("dis1").selection().set(2, 3);
     model.component("comp1").mesh("mesh1").feature("map1").feature("dis2").selection().set(4);
 	model.component("comp1").mesh("mesh1").feature("map1").feature("dis1").set("type", "predefined");
-    model.component("comp1").mesh("mesh1").feature("map1").feature("dis1").set("elemcount", 9);
-    model.component("comp1").mesh("mesh1").feature("map1").feature("dis1").set("elemratio", 2);
+    model.component("comp1").mesh("mesh1").feature("map1").feature("dis1").set("elemcount", 10);
+    model.component("comp1").mesh("mesh1").feature("map1").feature("dis1").set("elemratio", 3);
     model.component("comp1").mesh("mesh1").feature("map1").feature("dis1").set("symmetric", true);
-    model.component("comp1").mesh("mesh1").feature("map1").feature("dis2").set("numelem", 200);
+    model.component("comp1").mesh("mesh1").feature("map1").feature("dis2").set("numelem", 100);
     model.component("comp1").mesh("mesh1").run();
     
     model.view().create("view2", 3);

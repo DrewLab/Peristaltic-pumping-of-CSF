@@ -358,7 +358,7 @@ public class PVS_3D_matched {
     model.component("comp1").mesh("mesh1").feature("fq2").feature("dis1").set("elemratio", 2);
     model.component("comp1").mesh("mesh1").feature("fq2").feature("dis1").set("symmetric", true);
     model.component("comp1").mesh("mesh1").feature("map2").feature("size1").set("custom", "on");
-    model.component("comp1").mesh("mesh1").feature("map2").feature("size1").set("hmax", 0.25);
+    model.component("comp1").mesh("mesh1").feature("map2").feature("size1").set("hmax", 0.1);
     model.component("comp1").mesh("mesh1").feature("map2").feature("size1").set("hmaxactive", true);
     model.component("comp1").mesh("mesh1").feature("swe1").selection("sourceface").set(8, 9, 12);
     model.component("comp1").mesh("mesh1").feature("swe1").selection("targetface").set(7, 19);
